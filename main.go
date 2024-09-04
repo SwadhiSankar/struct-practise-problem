@@ -10,10 +10,10 @@ import (
 )
 
 func getNoteData()(string, string){
-	title :=getUserInput("Title")
+	title :=getUserInput("Title  : ")
 	
   
-	content :=getUserInput("Content")
+	content :=getUserInput("\n Content : ")
 	return title,content
 	
 }
@@ -26,8 +26,13 @@ func main(){
    }
    userNote.Display()
    
-   
+   err = userNote.Save()
 
+   if err !=nil{
+	fmt.Println("Saving the note is failed")
+	return
+   }
+   fmt.Println("Saving the note is succeeded \n\n")
 }
 
 func getUserInput(prompt string)(string){
