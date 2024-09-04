@@ -23,6 +23,8 @@ type outputtable interface{
 }
 
 func main(){
+
+
    title, content:=getNoteData()
 
     todoText :=getUserInput(" Todo Text :")
@@ -46,8 +48,22 @@ func main(){
   
    outputData(userNote)
    
-
+  anyValueAllowed(1)
+  anyValueAllowed(1.4)
+  anyValueAllowed("test")
   
+}
+
+func anyValueAllowed( value interface{}){
+	switch value.(type){
+	case int:
+		fmt.Println("its an integer",value)
+	case float32:
+		fmt.Println("its an integer",value)
+	case string:
+		fmt.Println("its an integer",value)
+	}
+	fmt.Println(value)
 }
 func outputData(data outputtable)error{
 	//to display and to save
