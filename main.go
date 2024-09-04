@@ -55,6 +55,11 @@ func main(){
 }
 
 func anyValueAllowed( value interface{}){
+	stringVal, ok := value.(string)
+	if ok{
+		fmt.Print("string",stringVal)
+		return
+	}
 	switch value.(type){
 	case int:
 		fmt.Println("its an integer",value)
