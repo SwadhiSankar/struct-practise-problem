@@ -32,7 +32,7 @@ func main(){
 	fmt.Println("Saving the note is failed")
 	return
    }
-   fmt.Println("Saving the note is succeeded \n\n")
+   fmt.Println("Saving the note is succeeded \n")
 }
 
 func getUserInput(prompt string)(string){
