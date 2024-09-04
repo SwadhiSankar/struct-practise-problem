@@ -16,6 +16,8 @@ func(note Note) Display(){
 
 }
 
+
+
 func New(title, content string) (Note,error){
 	if title == ""|| content ==""{
 		return Note{},errors.New("no value found")
